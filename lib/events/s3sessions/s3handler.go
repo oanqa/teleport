@@ -169,7 +169,7 @@ func (s *Config) CheckAndSetDefaults() error {
 		}
 		if s.Endpoint != "" {
 			sess.Config.Endpoint = aws.String(s.Endpoint)
-			sess.Config.S3ForcePathStyle = aws.Bool(true)
+			sess.Config.S3ForcePathStyle = aws.Bool(false)
 		}
 		if s.Insecure {
 			sess.Config.DisableSSL = aws.Bool(s.Insecure)
